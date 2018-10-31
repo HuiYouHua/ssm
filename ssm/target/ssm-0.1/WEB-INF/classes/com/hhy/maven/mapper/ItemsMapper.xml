@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.hhy.maven.mapper.ItemsMapper">
+	
+		<sql id="query_items_where">
+			<if test="name!=null and name!=''">
+				name LIKE '%ssm%'
+			</if>
+			<if test="price!=null and price!=''">
+				or price LIKE '%${price}%'
+			</if>
+		</sql>
+	
+		<select id="findItemsList"
+				parameterType="com.hhy.maven.po.Items" 
+				resultType="com.hhy.maven.po.Items">
+			SELECT itemList.* FROM itemList 
+			<where>
+				<include refid="query_items_where"></include>
+			</where>	
+		</select>
+		
+		<insert id="insertItem" parameterType="com.hhy.maven.po.Items">
+			<selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+				SELECT LAST_INSERT_ID()
+			</selectKey>
+			INSERT INTO itemList(name, price, pic, createtime, detail) 
+			values(#{name}, #{price}, #{pic}, #{createtime}, #{detail})
+		</insert> 
+		
+	</mapper>
+	
+

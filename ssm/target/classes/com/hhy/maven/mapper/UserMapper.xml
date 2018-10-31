@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ 
+ 	<mapper namespace="com.hhy.maven.mapper.UserMapper">
+ 	
+ 		<select id="findLoginUser"
+ 			 parameterType="com.hhy.maven.po.User"
+ 			 resultType="com.hhy.maven.po.User">
+ 			SELECT * FROM user WHERE  username=#{username} and userpwd=#{userpwd}
+ 		</select>
+ 	</mapper>
