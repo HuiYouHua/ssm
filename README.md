@@ -16,7 +16,7 @@ jdbc.password=huayoyu
 访问地址是http:localhost:8080/ssm/login
 主页截图如下
 ![主页截图](https://github.com/HuiYouHua/ssm/blob/master/Snip20181031_1.png "主页截图")
-项目目录结构如下
+项目目录结构如下（里面的的叉叉不用管）
 ![项目目录](https://github.com/HuiYouHua/ssm/blob/master/Snip20181031_5.png "项目目录")
 
 主要功能就是简单的登陆注销及商品的增删改查（删除和修改没做，嘿嘿）
