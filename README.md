@@ -12,7 +12,7 @@ jdbc.url=jdbc:mysql://localhost:3306/ssm?characterEncoding=utf-8
 jdbc.username=root
 jdbc.password=huayoyu
 ```
-你的账号密码弄成上面，name可以直接把war包放在tomcat的webapp下就可以访问
+你的账号密码弄成上面，那么可以直接把war包放在tomcat的webapp下就可以访问
 访问地址是http:localhost:8080/ssm/login
 主页截图如下
 ![主页截图](https://github.com/HuiYouHua/ssm/blob/master/Snip20181031_1.png "主页截图")
